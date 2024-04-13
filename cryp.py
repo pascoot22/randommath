@@ -8,17 +8,23 @@ while True:
         b = input("Enter a padding: ")
         str = ''
         for i in range(len(s)):
-            j = (lets[s[i]] + lets[b[i % len(b)]]) % 26
-            str += rev[j]
+            if (s[i] == ' '):
+                str += ' '
+            else:
+                j = (lets[s[i]] + lets[b[i % len(b)]]) % 26
+                str += rev[j - 1]
         print(str)
 
-    elif a == '1':
+    elif a == '1':  
         s = input("Enter a string to decrypt: ")
         b = input("Enter a padding: ")
         str = ''
         for i in range(len(s)):
-            j = (lets[s[i]] - lets[b[i % len(b)]]) % 26
-            str += rev[j]
+            if (s[i] == ' '):
+                str += ' '
+            else:
+                j = (lets[s[i]] - lets[b[i % len(b)]]) % 26
+                str += rev[j - 1]
         print(str)
     else:
         break
