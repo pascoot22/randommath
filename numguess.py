@@ -4,7 +4,7 @@ print("Welcome to my number guessing game")
 key = str(random.randint(100,999))
 
 won = False
-for i in range(8):
+for i in range(7):
     guess = input("enter a three digit guess: ")
     while len(guess) != 3:
         guess = input("no, three digits buddy, try again: ")
